@@ -51,6 +51,7 @@ class MenuSpider(BaseSpider):
             item['thc'] = thc
             cbd = getTHC(row.select('li[@class="active"]/div[@id="CBD"]'))
             #print "CBD", i, cbd
+            item['cbd'] = cbd
             strain = row.select('li[@class="strain"]/p/text()').extract()[0]
             item['strain'] = strain
             #print "strain", strain
